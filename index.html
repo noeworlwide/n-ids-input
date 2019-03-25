@@ -14,10 +14,13 @@
 
     <link rel="import" href="n-ids-input.html">
 
+
     <!-- <link rel="import" href="/src/n-ids-input-app/n-ids-input-app.html"> -->
   </head>
   <body>
     <!-- <n-ids-input-app></n-ids-input-app> -->
-    <n-ids-input label="Nombre"></n-ids-input>
+    <n-ids-input label="Nombre" icon="mail" pattern="[a-zA-Z]{3-20}" msj-error="Ingrese correctamete su nombre"></n-ids-input>
+    <paper-button on-tap="_submitForm">Submit</paper-button
+
   </body>
 </html>

@@ -11,7 +11,8 @@
   <!-- <paper-input>
     <iron-icons icon = "account-circle" prefix></iron-icons><slot></slot>
   </paper-input> -->
-  <paper-input label="[[label]]"><iron-icon icon="account-circle" prefix></iron-icon></paper-input>
+  <paper-input label="[[label]]" allowed-pattern="[[pattern]]" error-message="[[msjError]]" required>
+    <iron-icon icon="[[icon]]"  slot="prefix"></iron-icon></paper-input>
   </template>
 </dom-module>
 
@@ -28,7 +29,20 @@
         label : {
           type: String,
           value: ""
+        },
+        icon : {
+          type: String,
+          value: ""
+        },
+        pattern : {
+          type: String,
+          value : "[a-zA-z0-9]"
+        },
+        msjError : {
+          type: String,
+          value : "Invalido"
         }
+
       }
     }
 
