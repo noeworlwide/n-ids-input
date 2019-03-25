@@ -1,0 +1,38 @@
+<link rel="import" href="./bower_components/polymer/polymer-element.html">
+<link rel="import" href="./bower_components/paper-input/paper-input.html">
+<link rel="import" href="./bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="./bower_components/iron-icon/iron-icon.html">
+
+<dom-module id="n-ids-input">
+  Template input
+  <template>
+  <slot></slot>
+
+  <!-- <paper-input>
+    <iron-icons icon = "account-circle" prefix></iron-icons><slot></slot>
+  </paper-input> -->
+
+  <paper-input label="[[label]]"><iron-icon icon="account-circle" prefix></iron-icon></paper-input>
+  </template>
+</dom-module>
+
+<script type="text/javascript">
+  class NIdsInput extends Polymer.Element{
+    constructor (){
+      super();
+    }
+    static get is(){
+      return "n-ids-input";
+    }
+    static get properties(){
+      return{
+        label : {
+          type: String,
+          value: ""
+        }
+      }
+    }
+
+  }
+  window.customElements.define(NIdsInput.is, NIdsInput);
+</script>
